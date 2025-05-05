@@ -15,6 +15,22 @@ public class Recommendation {
 
     private List<UUID> recommendedContentIds;
 
+    public RecommendationKey getKey() {
+        return key;
+    }
+
+    public void setKey(RecommendationKey key) {
+        this.key = key;
+    }
+
+    public List<UUID> getRecommendedContentIds() {
+        return recommendedContentIds;
+    }
+
+    public void setRecommendedContentIds(List<UUID> recommendedContentIds) {
+        this.recommendedContentIds = recommendedContentIds;
+    }
+
     public static class RecommendationKey {
         @PrimaryKeyColumn(name = "user_id", type = PrimaryKeyType.PARTITIONED)
         private UUID userId;
